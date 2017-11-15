@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8">
+
+<title>Agendar Pacientes</title>
+<link rel="stylesheet" type="text/css" href="css/paciente.css">
+<script type="text/javascript" src="http://localhost/jquery/jquery-3.2.1.min.js"></script> 
+<script TYPE="text/javascript" src="http://localhost/clinica/js/eventos.js"></script>
+<script type="text/javascript" src="http://localhost/clinica/js/cadastrar.js"></script>
+
+</head>
+<body>
+	<div class="cont"></div>
+	<header>
+		<h3 align="center"> Agendamento de Pacientes </h1>
+	</header>
+
+	<ul> 
+    	<li><a href="index.php">Sair</a></li> 
+  </ul>
+
+	<div id="info"></div>
+	<div class="eventos">Aguardando Ação</div>
+	
+
+	<center>
+	
+	<div class="conteudo">
+
+	<form method="post" id="dadosPac" class="dadosPac">
+		
+		<div class="checkbox">
+			<label for="primeira">Primeira sessão:</label>
+			<input type="checkbox" id="primeira" name="primeira" class="primeira"></input>
+			<br>
+		</div>
+
+
+		<label for="consulta" align="left">Consulta:</label>
+		<select class="inputs cons" id="consulta"  onchange="habilita()">	
+								
+			<option id="tipo" selected>Selecione o tipo da consulta</option>
+			<option id="part">Particular</option>
+			<option id="plan">Plano</option>
+		
+		</select>		
+
+		<label for="plano" align="left">Plano:</label>
+		<select class="inputs" id="plano" name="plano" onchange="habilita()">
+			<option value="" selected >Selecione o plano </option>
+				<option id="unimed">Unimed</option>		
+				<option id="vitalis">Vitalis</option>		
+
+		</select><br>
+
+		<label for="nome" align="left">Nome:</label>
+		<input class="inputs" type="text" id="nome" name="nome" placeholder="Digite o nome" required>
+		
+		<label for="cpf" align="left">CPF:</label>
+		<input class="inputs peq" type="text" id="cpf" name="cpf" placeholder="Digite o CPF" required><br>		
+		
+		<label for="endereco">Endereço:</label> 
+		<input class="inputs" type="text" id="endereco" name="endereco" placeholder="Digite o endereço" required>
+		
+		<label for="bairro">Bairro:</label> 
+		<input class="inputs" type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required><br>
+		
+		<label for="Cidade">Cidade:</label> 
+		
+		<select class="inputs peq" id="cidade" >
+			<option value ="Ituiutaba">Ituiutaba</option>
+			<option value ="Capinópolis">Capinópolis</option>
+			<option value ="Ipiaçu">Ipiaçu</option>
+			<option value ="Santa Vitória">Santa Vitória</option>
+
+		</select>
+
+		<label for="uf"> UF </label> 
+		<select class="inputs peq" id="uf" name="uf">
+			<option value ="MG"> MG</option>
+		</select>
+
+		<label for="tel"> Telefone </label> 
+		<input class="inputs peq" type="text" id="tel" name="tel" placeholder="Digite o telefone" required><br>
+		
+		<label for="dtNasc"> Data de Nascimento: </label> 
+		<input class="inputs peq" type="Date" id="dtnasc" name="dtnasc"><br>
+
+		<label for="dataCons"> Data da Consulta: </label> 
+		<input class="inputs peq" type="Date" id="dtcons" name="dtcons"><br>
+
+		<label for="horario"> Horário Atendimento: </label> 
+		<input class="inputs peq" type="time" id="horario" name="horario"><br>
+		
+		<button class="button" onclick="agendar()">Agendar</button>
+
+
+</form>
+</div>
+</center>
+	
+
+		</body>
+
+	
+	
+	</article>	
+	<footer><center>Copyright &copy; Desenvolvido por @Vasconcellos	</center></footer>
+
+
+	
+</html>

@@ -1,0 +1,125 @@
+body {
+  background: #FFFFCC;
+  font-family: 'Verdana', sans-serif;
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1E90FF;
+    
+}
+
+li{
+  float: left;
+
+}
+
+li a{
+  display: block;
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 14px 16px;
+  text-decoration: none;
+
+
+}
+
+fieldset { 
+  font-family: sans-serif;
+  font-style: bold;
+  font-size:14px; 
+  padding:5px; 
+  width:250px; 
+  line-height:1.8; 
+  margin: 0 auto; 
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-100px 0 0 -150px;
+} 
+
+li a:hover{
+    background-color: #87CEEB;
+    color: white;
+}
+
+
+.form {
+  color: #000000;
+  display: flex;
+  width: 550px;
+  background: #87CEEB;
+  color: #CCC;
+  padding: 10px;
+}
+
+.form .section {
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.form .section .control-group {
+  margin-top: 10px;
+}
+
+.form .section .control-group .control {
+  width: 100%;
+}
+
+
+.form .section .control-group .control-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+
+.control{
+  padding: 10px;
+
+}
+	div.cont{
+    width:100%;
+    border:1px solid gray;
+  }
+
+  
+  
+  header,footer{
+    padding:1em;
+    color:white;
+    background-color:#FF0000;
+  }
+
+  footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+  button{
+  background-color: #1E90FF;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: times;
+  cursor: pointer;
+}

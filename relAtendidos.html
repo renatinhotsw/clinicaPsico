@@ -1,0 +1,59 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>Relatório - Atendidos</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/agendados.css">
+	<link rel="stylesheet" type="text/css" href="css/tabela.css">
+
+</head>
+<body>
+
+
+<div class="container"></div>
+	<header>
+		<h3 align="center"> +Psico -Pacientes Agendados </h1>
+	</header>
+
+	<hr>
+	<ul> 
+    <li><a class="active" href="principal.php">Home</a></li> 
+    <li><a href="agendados.html">Agendados</a></li>
+
+    <li><a href="">Relatórios</a> </li>
+    <li><a href="index.php">Sair</a></li> 
+  </ul>
+  <hr>
+
+<div id="info"></div>
+<center><button onclick="atualizar()" class="button agend">Atualizar</button></center>
+
+<script type="text/javascript">
+	var resultado = document.getElementById("info");
+
+	function atualizar(){
+		var xmlhttp;
+
+		if(window.XMLHttpRequest){
+			xmlhttp = new XMLHttpRequest();
+		}
+
+		xmlhttp.onreadystatechange=function(){
+			if(this.readyState==4 && this.status ==200){
+				resultado.innerHTML= this.responseText;
+			}
+		}
+		xmlhttp.open("GET","servidor.php",true);
+		xmlhttp.send();
+	}
+
+
+</script>
+
+
+
+
+
+<footer><center>Copyright &copy; - Desenvolvido por @Vasconcellos	</center></footer>
+</body>
+</html>
